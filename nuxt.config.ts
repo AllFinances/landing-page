@@ -9,4 +9,7 @@ export default defineNuxtConfig({
 			autoprefixer: {},
 		},
 	},
+	nitro: {
+		baseURL: "/landing-page/",
+	},
 });
