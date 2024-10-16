@@ -3,7 +3,7 @@
 		<!-- Hero Section -->
 		<section class="bg-darker py-16 text-center">
 			<div class="container mx-auto px-6">
-				<h1 class="text-5xl font-bold mb-6 text-accent2">Unlock Your Business Potential</h1>
+				<h1 class="text-5xl font-bold mb-6 text-accent2">Unlock Your Business Potential, Hi edgars</h1>
 				<p class="text-lg mb-10 text-gray-300">Discover the solutions that elevate your business to new heights.</p>
 				<button class="bg-accent2 text-black font-bold px-8 py-4 rounded-lg hover:bg-lightaccent2 transition duration-300">
 					Get Started
