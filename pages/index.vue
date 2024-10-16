@@ -9,7 +9,7 @@
 			</div>
 		</section>
 
-		<!-- USP Section -->
+		<!-- USP Section  -->
 		<section class="py-16">
 			<div class="container mx-auto px-6">
 				<div class="grid md:grid-cols-3 gap-8 text-center">
