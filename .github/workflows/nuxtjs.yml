@@ -72,6 +72,8 @@ jobs:
               run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
             - name: Static HTML export with Nuxt
               run: ${{ steps.detect-package-manager.outputs.manager }} run generate
+            - name: Verify CSS file size
+              run: ls -lh dist/_nuxt/*.css # Optional check to see if the CSS is bundled
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
