@@ -38,9 +38,9 @@ export default defineNuxtConfig({
 			{ code: "en", language: "en-US", name: "English" },
 			{ code: "lv", language: "lv-LV", name: "Latviešu" },
 		],
-		strategy: "prefix",
+		strategy: "no_prefix",
 		defaultLocale: "en",
-		baseUrl: "/landing-page/",
+		// baseUrl: "/landing-page/",
 		detectBrowserLanguage: {
 			useCookie: true,
 			cookieKey: "i18n_redirected",
