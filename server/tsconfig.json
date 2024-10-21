@@ -1,3 +1,9 @@
 {
-  "extends": "../.nuxt/tsconfig.server.json"
+	"extends": "../.nuxt/tsconfig.server.json",
+	"compilerOptions": {
+		"noImplicitAny": false,
+		"module": "esnext",
+		"moduleResolution": "node",
+		"target": "ESNext"
+	}
 }

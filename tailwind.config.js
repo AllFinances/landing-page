@@ -1,36 +1,46 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+	important: "#app",
 	content: ["./components/**/*.{vue,js}", "./layouts/**/*.vue", "./pages/**/*.vue", "./plugins/**/*.{js,ts}", "./nuxt.config.{js,ts}"],
+	darkMode: "class",
 	theme: {
 		extend: {
 			colors: {
-				primary: "#1E3A8A", // Custom primary color (dark blue)
-				secondary: "#1D4ED8", // Custom secondary color (lighter blue)
-				accent: "#F59E0B", // Custom accent color (orange)
-				background: "#F3F4F6", // Custom background color (light gray)
-				dark: "#1a1a2e",
-				darker: "#0f0f1f",
-				accent2: "#00f6ff",
-				lightAccent: "#6effff",
+				transparent: "transparent",
+				current: "currentColor",
+				background: "rgb(var(--color-background) / <alpha-value>)",
+				surface: {
+					100: "rgb(var(--color-surface-level-1) / <alpha-value>)",
+					200: "rgb(var(--color-surface-level-2) / <alpha-value>)",
+					300: "rgb(var(--color-surface-level-3) / <alpha-value>)",
+				},
+				primary: "rgb(var(--color-primary) / <alpha-value>)",
+				secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+				success: "rgb(var(--color-success) / <alpha-value>)",
+				info: "rgb(var(--color-info) / <alpha-value>)",
+				warn: "rgb(var(--color-warn) / <alpha-value>)",
+				error: "rgb(var(--color-error) / <alpha-value>)",
 			},
+
 			fontFamily: {
-				sans: ["Inter", "sans-serif"], // Custom sans-serif font
-				heading: ["Poppins", "sans-serif"], // Custom font for headings
+				sans: ["Inter", "sans-serif"],
+				heading: ["Poppins", "sans-serif"],
 			},
+			
 			spacing: {
-				72: "18rem", // Add larger spacing value for padding/margin
-				84: "21rem",
-				96: "24rem",
-			},
-			borderRadius: {
-				"xl": "1rem", // Custom border radius size for large buttons/cards
-				"2xl": "1.5rem",
-			},
-			boxShadow: {
-				lg: "0 10px 15px rgba(0, 0, 0, 0.1)", // Custom box shadow for elevation
-				xl: "0 20px 25px rgba(0, 0, 0, 0.15)",
+				1: "8px",
+				2: "12px",
+				3: "16px",
+				4: "24px",
+				5: "32px",
+				6: "48px",
 			},
 		},
 	},
-	plugins: [require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/typography")],
+	plugins: [
+		require("@tailwindcss/forms"),
+		require("@tailwindcss/aspect-ratio"),
+		require("@tailwindcss/typography"),
+		require("@tailwindcss/container-queries"),
+	],
 };

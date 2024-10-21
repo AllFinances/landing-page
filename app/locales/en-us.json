@@ -1,0 +1,9 @@
+{
+    "sections": {
+        "hero": {
+            "title": "Hero section title",
+            "subtitle": "With our cutting-edge solution, take your business to the next level",
+            "action": "Get Started"
+        }
+    }
+}
