@@ -40,7 +40,7 @@ export default defineNuxtConfig({
 		],
 		strategy: "prefix",
 		defaultLocale: "en",
-		baseUrl: process.env.NUXT_PUBLIC_SITE_URL,
+		baseUrl: "/landing-page/",
 		detectBrowserLanguage: {
 			useCookie: true,
 			cookieKey: "i18n_redirected",
