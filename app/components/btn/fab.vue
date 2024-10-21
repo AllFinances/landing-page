@@ -4,7 +4,7 @@
 		@click="scrollToTop"
 		class="fixed bottom-3 right-3 bg-blue-500 text-white rounded-full shadow-lg p-2 transition-transform hover:scale-105"
 	>
-		<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+		<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 			<path d="M10 4.586L13.293 7.879 12.879 8.293 10 5.414 7.121 8.293 6.707 7.879 10 4.586z" />
 			<path d="M10 12.586L13.293 15.879 12.879 16.293 10 13.414 7.121 16.293 6.707 15.879 10 12.586z" />
 		</svg>
