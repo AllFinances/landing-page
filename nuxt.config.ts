@@ -17,6 +17,7 @@ export default defineNuxtConfig({
 	},
 	app: {
 		buildAssetsDir: "/landing-page/",
+		baseURL: "/landing-page/",
 	},
 	css: ["~/assets/css/tailwind.css"],
 	modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxt/icon", "@nuxtjs/i18n", "@nuxtjs/sitemap", "@pinia/nuxt", "@nuxtjs/robots"],
