@@ -3,3 +3,9 @@ Disallow: /en/secret
 Disallow: /en/admin
 Disallow: /lv/secret
 Disallow: /lv/admin
+allow: /lv
+allow: /en
+allow: /
+allow: /landing-page/lv
+allow: /landing-page/en
+allow: /landing-page

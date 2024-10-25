@@ -2,7 +2,7 @@
 	<button
 		v-if="isVisible"
 		@click="scrollToTop"
-		class="fixed bottom-3 right-3 bg-blue-500 text-white rounded-full shadow-lg p-2 transition-transform hover:scale-105"
+		class="fixed bottom-2 right-2 bg-secondary text-on-secondary rounded-full shadow-lg p-1 transition-transform hover:scale-105"
 	>
 		<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 			<path d="M10 4.586L13.293 7.879 12.879 8.293 10 5.414 7.121 8.293 6.707 7.879 10 4.586z" />

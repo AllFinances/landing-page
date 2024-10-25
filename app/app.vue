@@ -24,4 +24,11 @@
 			}
 		}
 	);
+
+	const sessionStore = useSessionStore();
+
+	onMounted(async () => {
+		sessionStore.loadSessionPlatform();
+		await sessionStore.loadSessionLocation();
+	});
 </script>

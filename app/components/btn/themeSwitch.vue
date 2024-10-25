@@ -1,20 +1,20 @@
 <template>
-	<div class="flex flex-row items-center justify-center">
+	<span>
 		<div
 			v-show="colorMode.preference === 'light'"
-			class="theme-icon text-typography_primary_light dark:text-typography_primary_dark"
+			class="theme-icon text-secondary-variant hover:text-secondary hover:cursor-pointer font-bold"
 			@click="toggleTheme"
 		>
-			<Icon name="mdi:theme-light-dark" />
+			<Icon name="mdi:theme-light-dark" class="text-2xl" />
 		</div>
 		<div
 			v-show="colorMode.preference === 'dark'"
-			class="theme-icon text-typography_primary_light dark:text-typography_primary_dark"
+			class="theme-icon text-secondary-variant hover:text-secondary hover:cursor-pointer font-bold"
 			@click="toggleTheme"
 		>
-			<Icon name="mdi:theme-light-dark" />
+			<Icon name="mdi:theme-light-dark" class="text-2xl" />
 		</div>
-	</div>
+	</span>
 </template>
 
 <script setup>

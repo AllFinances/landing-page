@@ -9,6 +9,9 @@ export default defineNuxtConfig({
 		payloadExtraction: false,
 	},
 	nitro: {
+		prerender: {
+			routes: ["/en", "/lv", "/", "/landing-page/en", "/landing-page/lv", "/landing-page"],
+		},
 		esbuild: {
 			options: {
 				target: "esnext",
@@ -18,9 +21,25 @@ export default defineNuxtConfig({
 	app: {
 		buildAssetsDir: "/landing-page/",
 		baseURL: "/landing-page/",
+		// buildAssetsDir: "/_flowture/",
+		head: {
+			title: "Flowture",
+			charset: "utf-8",
+			viewport: "width=device-width, initial-scale=1",
+			link: [{ rel: "icon", type: "application/xml", href: "/lv.svg" }],
+		},
 	},
 	css: ["~/assets/css/tailwind.css"],
-	modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode", "@nuxt/icon", "@nuxtjs/i18n", "@nuxtjs/sitemap", "@pinia/nuxt", "@nuxtjs/robots"],
+	modules: [
+		"@nuxtjs/tailwindcss",
+		"@nuxtjs/color-mode",
+		"@nuxt/icon",
+		"@nuxtjs/i18n",
+		"@nuxtjs/sitemap",
+		"@pinia/nuxt",
+		"@nuxtjs/robots",
+		"@nuxt/image",
+	],
 
 	postcss: {
 		plugins: {
@@ -38,9 +57,9 @@ export default defineNuxtConfig({
 			{ code: "en", language: "en-US", name: "English" },
 			{ code: "lv", language: "lv-LV", name: "Latviešu" },
 		],
+		// strategy: "prefix",
 		strategy: "no_prefix",
 		defaultLocale: "en",
-		// baseUrl: "/landing-page/",
 		detectBrowserLanguage: {
 			useCookie: true,
 			cookieKey: "i18n_redirected",
@@ -52,6 +71,11 @@ export default defineNuxtConfig({
 	},
 	robots: {
 		disallow: ["/secret", "/admin"],
+		allow: ["/en", "/lv", "/", "/landing-page/en", "/landing-page/lv", "/landing-page"],
+	},
+	site: { indexable: true },
+	image: {
+		inject: true,
 	},
 	imports: {
 		dirs: ["store", "types"],
@@ -62,5 +86,6 @@ export default defineNuxtConfig({
 		emailUser: process.env.NUXT_EMAIL_USER,
 		emailPassword: process.env.NUXT_EMAIL_PASSWORD,
 		emailFrom: process.env.NUXT_EMAIL_FROM,
+		supabaseKey: process.env.NUXT_SUPABASE_KEY,
 	},
 });
