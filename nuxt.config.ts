@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 	},
 	nitro: {
 		prerender: {
-			routes: ["/en", "/lv", "/", "/landing-page/en", "/landing-page/lv", "/landing-page"],
+			routes: ["/en", "/lv", "/"],
 		},
 		esbuild: {
 			options: {
@@ -19,9 +19,7 @@ export default defineNuxtConfig({
 		},
 	},
 	app: {
-		buildAssetsDir: "/landing-page/",
-		baseURL: "/landing-page/",
-		// buildAssetsDir: "/_flowture/",
+		buildAssetsDir: "/_flowture/",
 		head: {
 			title: "Flowture",
 			charset: "utf-8",
@@ -57,8 +55,7 @@ export default defineNuxtConfig({
 			{ code: "en", language: "en-US", name: "English" },
 			{ code: "lv", language: "lv-LV", name: "Latviešu" },
 		],
-		// strategy: "prefix",
-		strategy: "no_prefix",
+		strategy: "prefix",
 		defaultLocale: "en",
 		detectBrowserLanguage: {
 			useCookie: true,
@@ -71,7 +68,7 @@ export default defineNuxtConfig({
 	},
 	robots: {
 		disallow: ["/secret", "/admin"],
-		allow: ["/en", "/lv", "/", "/landing-page/en", "/landing-page/lv", "/landing-page"],
+		allow: ["/en", "/lv", "/"],
 	},
 	site: { indexable: true },
 	image: {

@@ -11,7 +11,11 @@
 		bodyAttrs: {
 			id: "app",
 		},
+		htmlAttrs: {
+			lang: locale.value,
+		},
 		title: `Flowture | ${locale.value.toUpperCase()}`,
+		meta: [{ property: "og:title", content: `Flowture | ${locale.value.toUpperCase()}` }],
 	});
 
 	watch(
@@ -19,7 +23,11 @@
 		(newValue) => {
 			if (newValue) {
 				useHead({
+					htmlAttrs: {
+						lang: locale.value,
+					},
 					title: `Flowture | ${locale.value.toUpperCase()}`,
+					meta: [{ property: "og:title", content: `Flowture | ${locale.value.toUpperCase()}` }],
 				});
 			}
 		}
